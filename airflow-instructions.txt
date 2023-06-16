@@ -1,0 +1,9 @@
+mkdir -p ./dags ./logs ./plugins
+echo -e "AIRFLOW_UID=$(id -u)" > .env
+curl -LfO 'https://airflow.apache.org/docs/apache-airflow/stable/docker-compose.yaml'
+
+1. Build the the docker-compose.yaml which has comprises image from Dockerfile -> docker-compose build
+
+2. Initialize Airflow and other config -> docker-compose up airflow-init
+
+3. Kick up all services from the container -> docker-compose up
